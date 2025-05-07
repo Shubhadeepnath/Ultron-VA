@@ -17,26 +17,7 @@ def speak(text):
 
 
 
-# def get_weather(city):
-#     api_key ="50a0b7fedbc6ed1783655588d3de94a0"  # replace with your actual API key
 
-    
-#     base_url = "http://api.openweathermap.org/data/2.5/weather?"
-
-#     complete_url = f"{base_url}appid={api_key}&q={city}&units=metric"
-
-#     response = requests.get(complete_url)
-#     data = response.json()
-
-#     if data["cod"] != "404":
-#         main = data["main"]
-#         weather_desc = data["weather"][0]["description"]
-#         temp = main["temp"]
-#         humidity = main["humidity"]
-#         result = f"Currently in {city}, it's {temp}°C with {weather_desc} and {humidity}% humidity."
-#         return result 
-#     else:
-#         return "City not found. Please try again."
 
 def get_weather(city):
     api_key = os.getenv("OPENWEATHER_API_KEY")
